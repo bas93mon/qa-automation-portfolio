@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../project_QA/Python_Project _vs_code/playwright-python"
+		},
+		{
+			"path": "../project_QA/Python_Project _vs_code/Selenium"
+		},
+		{
+			"path": "../project_QA/Python_Project _vs_code/Roadmap"
+		}
+	],
+	"settings": {}
+}
