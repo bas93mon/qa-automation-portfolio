@@ -1,11 +1,14 @@
-import selenium
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 def test_page_orange_hrm():
-    # Chrome driver setup
-    driver = webdriver.Chrome()
-    driver.implicitly_wait(10) # Wait time ektu bariye din
+    # Chrome driver automatic setup
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service)
+    
+    driver.implicitly_wait(10)
     driver.maximize_window()
 
     driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
@@ -15,3 +18,5 @@ def test_page_orange_hrm():
     
     # Browser bondho kora
     driver.quit()
+
+    #  python -m pytest -v test_orange_hrm_login_validation.py
